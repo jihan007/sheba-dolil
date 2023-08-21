@@ -60,6 +60,10 @@ h1, h2, h3, h4, h5, h6, p, small, label, input, select, option, textarea, a, cen
     transition: background-position 0.15s ease-in-out;
 }
 
+.sidebar .sidebar-body .nav .nav-item:hover .nav-link .link-title {
+    margin-left: 18px;
+}
+
 /* Color Fix */
 .sidebar .sidebar-header .sidebar-brand span, .sidebar .sidebar-body .nav .nav-item.active .nav-link, .sidebar .sidebar-body .nav .nav-item.active .nav-link, .sidebar .sidebar-body .nav .nav-item.active .nav-link .link-icon {
     color: var(--color-success);
