@@ -66,6 +66,49 @@
     
     <script async="" src="./index_files/js"></script>
     
+    <style>
+        .setting-nav {
+        padding: 10px 5px;
+        background: transparent;
+        list-style: none;
+        }
+        
+        .setting-content {
+        box-shadow: 1px 1px 7px 5px rgba(0, 0, 0, 0.02);
+        padding: 15px 1rem;
+        }
+        
+        .setting-content h3 {
+        margin: 10px 0px;
+        }
+        
+        .setting-nav li a {
+        border-radius: 5px;
+        padding: 15px 10px;
+        margin: 20px 0;
+        display: block;
+        }
+        
+        .setting-nav li a:hover {
+        background-color: rgb(202, 202, 202);
+        cursor: pointer;
+        }
+        
+        .setting-nav li.active a {
+        background-color: #05a34a;
+        font-weight: bold;
+        }
+        
+        .setting-nav li.active a {
+        color: rgb(255, 255, 255);
+        
+        }
+        
+        .setting-nav li a {
+        color: rgb(0, 0, 0);
+        }
+    </style>
+    
 </head>
 
 
@@ -145,7 +188,7 @@
                                 <a class="nav-link dropdown-toggle" href="/admin/dashboard#" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <img class="wd-30 ht-30 rounded-circle" src="images/user-profile.svg">
                                 </a>
-                                <div class="dropdown-menu p-0" aria-labelledby="profileDropdown">                                    
+                                <div class="dropdown-menu p-0" aria-labelledby="profileDropdown">
                                     <ul class="list-unstyled p-1">
                                         <li class="dropdown-item py-2">
                                             <a href="user-profile.html" class="text-body ms-0">
@@ -183,7 +226,7 @@
                             <div class="row align-items-center">
                                 <div class="col-sm-12">
                                     <div class="page-title text-capitalize">
-                                        <h4 class="breadcrumb-title">ড্যাশবোর্ড</h4>
+                                        <h4 class="breadcrumb-title">প্রোফাইল সেটিংস</h4>
                                     </div>
                                 </div>
                             </div>
@@ -195,176 +238,76 @@
                             <section id="front-managment" class="w-100">
                                 
                                 <div class="row">
-                                    <div class="col-md-6 col-lg-3 col-sm-6 grid-margin stretch-card">
-                                        <div class="card position-relative border-primary">
-                                            <a href="">
-                                                <div class="card-body">
-                                                    <div class="d-flex justify-content-between align-items-baseline">
-                                                        <h6 class="card-title mb-2 text-primary"><b>মোট সেবা সংখ্যা</b></h6>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-12">
-                                                            <h3 class="mb-2">২৯ টি</h3>
+                                    <div class="col-md-12 stretch-card">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="p-0 page_speed_1542329029">
+                                                    <div class="row page_speed_1740118121">
+                                                        <div class="col-md-3">
+                                                            <ul class="setting-nav ">
+                                                                <li class="active">
+                                                                    <a href="user-profile-settings.html?active_tab=general-info">
+                                                                        প্রাথমিক তথ্য
+                                                                    </a>
+                                                                </li>
+                                                                <li class="">
+                                                                    <a href="user-profile-settings.html?active_tab=update-password">
+                                                                        পাসওয়ার্ড আপডেট
+                                                                    </a>
+                                                                </li>
+                                                                <li class=""><a href="user-profile-settings.html?active_tab=two-factor-authentication">
+                                                                    Two Step ভেরিফিকেশন
+                                                                </a>
+                                                                </li>
+                                                                
+                                                                <li class=""><a href="user-profile-settings.html?active_tab=browser-sessions">
+                                                                    ব্রাউজার সেশন
+                                                                </a>
+                                                                </li>
+                                                                
+                                                            </ul>
+                                                        </div>
+                                                        <div class="col-md-9">
+                                                            <div class="setting-content">
+                                                                <div>
+                                                                    <h3>প্রাথমিক তথ্য</h3>
+                                                                    <p>আপনার প্রাথমিক তথ্য আপডেট করুন</p>
+                                                                    <hr>
+                                                                </div>
+                                                                <div class="content">
+                                                                    <form enctype="multipart/form-data" action="user-profile-settings.html?active_tab=general-info" method="POST" data-gtm-form-interact-id="0">
+                                                                        <input type="hidden" name="_token" value="AEfdWBVNXS9LYWUIAdZnFBQsgFyUag3n6mofhf1q">        <div class="form-group pt-1 pb-1">
+                                                                            <label for="name" class="font-black">নাম</label>
+                                                                            <input type="text" class="form-control" name="name" id="name" placeholder="আপনার নাম লিখুন (In English)" value="Md Maksu Miah" readonly="">
+                                                                        </div>
+                                                                        <div class="form-group pt-1 pb-1">
+                                                                            <label for="username" class="font-black">ইউজার নেইম</label>
+                                                                            <input type="text" class="form-control" name="username" id="username" placeholder="Enter username" value="easywp" required="" data-gtm-form-interact-field-id="0">
+                                                                        <div data-lastpass-icon-root="true" style="position: relative !important; height: 0px !important; width: 0px !important; float: left !important;"></div></div>
+                                                                        <div class="form-group">
+                                                                            <label for="avatar" class="font-black">প্রোফাইল ছবি</label>
+                                                                            <div class="p-2">
+                                                                                <img src="https://ui-avatars.com/api/?name=M+M+M&amp;color=7F9CF5&amp;background=EBF4FF" class="img-thumbnail" id="UserImage" width="128px">
+                                                                            </div>
+                                                                            <input type="file" class="form-control" name="avatar" id="avatar" placeholder="select avatar image" onchange="get_img_url(this,'#UserImage')">
+                                                                        </div>
+                                                                        <div class="col-md-12 ">
+                                                                            <div class="form-group pt-1 pb-1">
+                                                                                <button type="submit" class="btn btn-success btn-round">আপডেট করুন</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </form>
+                                                                </div>
+                                                                
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </a>
-                                            <i class="bx bx-bookmark-minus card-bg-icon text-secondary"></i>
+                                                
+                                            </div>
                                         </div>
                                     </div>
                                     
-                                    <div class="col-md-6 col-lg-3 col-sm-6 grid-margin stretch-card">
-                                        <div class="card position-relative border-danger">
-                                            <div class="card-body">
-                                                <div class="d-flex justify-content-between align-items-baseline">
-                                                    <h6 class="card-title mb-2 text-danger"><b>মোট কমিশন</b></h6>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-12">
-                                                        <h3 class="mb-2">০ টাকা</h3>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <i class="bx bx-wallet-alt card-bg-icon text-secondary"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="row">
-                                    <div class="col-md-12 stretch-card">
-                                        <div class="card">                                            
-                                            <div class="card-body pb-0">
-                                                <h4>
-                                                    <strong>সেবা প্রদানের তথ্য</strong>
-                                                    <div class="btn-group float-right" style="float:right;">
-                                                        
-                                                        <a class="btn btn-sm btn-info" href="#">Pending</a>                                                        
-                                                        <a class="btn btn-sm btn-success" href="#">Approved</a>
-                                                        
-                                                        <a class="btn btn-sm btn-secondary" href="#">ALL</a>
-                                                    </div>
-                                                </h4>
-                                                <!-- Modal -->
-                                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                                    <div class="modal-dialog modal-lg">
-                                                        <div class="modal-content">
-                                                            <div class="modal-header">
-                                                                <h1 class="modal-title fs-5" id="exampleModalLabel">তথ্য যুক্ত করুন</h1>
-                                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                            </div>
-                                                            <div class="modal-body">
-                                                                <form>
-                                                                    <div class="row">
-                                                                        <div class="col-md-3">
-                                                                            <div class="mb-3">
-                                                                                <label for="nid_no" class="form-label"><strong>NID নম্বর</strong></label>
-                                                                                <h5>90124419875</h5>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="col-md-3">
-                                                                            <div class="mb-3">
-                                                                                <label class="form-label" for="manual-payment"><strong>Manual Payment</strong></label>
-                                                                                <div class="form-check form-switch">
-                                                                                    <input class="form-check-input" type="checkbox" role="switch" id="manual-payment">
-                                                                                    
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="col-md-6">
-                                                                            <div class="mb-3">
-                                                                                <label for="formFile" class="form-label"><strong>Uplaod Edited PDF</strong></label>
-                                                                                <input class="form-control" type="file" id="formFile">
-                                                                            </div>
-                                                                        </div>	
-                                                                        <div class="col-md-3">
-                                                                            <div class="mb-3">
-                                                                                <label for="nid_no" class="form-label"><strong>অফিসের নাম</strong></label>
-                                                                                <h5>N/A</h5>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    
-                                                                    <button type="submit" class="btn btn-success"><i class="fa fa-save"></i>&nbsp;Save</button>
-                                                                </form>
-                                                            </div>
-                                                            <div class="modal-footer">
-                                                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                                                            </div>
-                                                        </div>											
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
-                                            
-                                            <div class="card-body pl-0 pr-0">
-                                                <div id="_wrapper" class=" dt-bootstrap4 no-footer">
-                                                    <div class="s_scroll">										
-                                                        <div class="s_scrollBody" style="position: relative; overflow: auto; width: 100%;"><table class="table table-bordered table-striped   no-footer text-center" id="" role="grid" aria-describedby="_info" style="width: 100%;">											
-                                                            <thead>
-                                                                <tr role="row">
-                                                                    <th class="sorting_asc" colspan="1" rowspan="1">
-                                                                        <div class="s_sizing">
-                                                                            SL
-                                                                        </div>
-                                                                    </th>
-                                                                    <th class="sorting" colspan="1" rowspan="1">
-                                                                        <div class="s_sizing">
-                                                                            NID নম্বর
-                                                                        </div>
-                                                                    </th>
-                                                                    <th class="sorting" colspan="1" rowspan="1">
-                                                                        <div class="s_sizing" style=" overflow: hidden;">
-                                                                            জন্ম তারিখ
-                                                                        </div>
-                                                                    </th>
-                                                                    <th class="sorting" colspan="1" rowspan="1">
-                                                                        <div class="s_sizing">
-                                                                            পেমেন্ট
-                                                                        </div>
-                                                                    </th>
-                                                                    <th class="sorting" colspan="1" rowspan="1">
-                                                                        <div class="s_sizing">
-                                                                            তারিখ
-                                                                        </div>
-                                                                    </th>
-                                                                    <th class="sorting" colspan="1" rowspan="1">
-                                                                        <div class="s_sizing">
-                                                                            স্ট্যাটাস
-                                                                        </div>
-                                                                    </th>
-                                                                    <th class="sorting" colspan="1" rowspan="1">
-                                                                        <div class="s_sizing">
-                                                                            একশন
-                                                                        </div>
-                                                                    </th>
-                                                                </tr>
-                                                            </thead>											
-                                                            <tbody>
-                                                                <tr id="tr-5" role="row" class="odd">
-                                                                    <td style="width: 2%" class="sorting_1">০১</td>
-                                                                    <td>90124419875</td>
-                                                                    <td>02-08-1989</td>
-                                                                    <td>Pending</td>
-                                                                    <td>16-08-2023</td>	
-                                                                    <td>Pending</td>	
-                                                                    <td class="text-center" style="width: 15%">
-                                                                        <div class="btn-group">
-                                                                            <a class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa fa-upload text-white"></i></a> 
-                                                                            <a class="btn btn-sm btn-warning"><i class="fa fa-edit text-white"></i></a>
-                                                                            <a class="btn btn-sm btn-info"><i class="fa fa-eye text-white"></i></a>
-                                                                        </div>							
-                                                                    </td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!--/.card-->
-                                        
-                                    </div>
                                 </div>
                             </section>
                         </div>
