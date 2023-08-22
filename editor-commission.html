@@ -97,7 +97,7 @@
                         <li class="text-capitalize  nav-item nav-category ">
                             ড্যাশবোর্ড
                         </li>
-                        <li class="text-capitalize active nav-item ">
+                        <li class="text-capitalize nav-item ">
                             <a class="active text-capitalize waves-effect nav-link" href="index.html">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-box link-icon"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
                                 <span class="link-title">ড্যাশবোর্ড</span>
@@ -109,8 +109,8 @@
                         <li class="text-capitalize  nav-item nav-category ">
                             সেবার হিসাব
                         </li>
-                        <li class="text-capitalize  nav-item ">
-                            <a class=" text-capitalize waves-effect nav-link" href="editor-commission.html">
+                        <li class="text-capitalize  active nav-item ">
+                            <a class=" text-capitalize waves-effect nav-link" href="/admin/expense">
                                 <i class="far fa-money-bill-alt"></i>
                                 <span class="link-title">
                                     কমিশন
@@ -192,7 +192,7 @@
                             <div class="row align-items-center">
                                 <div class="col-sm-12">
                                     <div class="page-title text-capitalize">
-                                        <h4 class="breadcrumb-title">ড্যাশবোর্ড</h4>
+                                        <h4 class="breadcrumb-title">কমিশন (টাকা)</h4>
                                     </div>
                                 </div>
                             </div>
@@ -244,14 +244,7 @@
                                         <div class="card">                                            
                                             <div class="card-body pb-0">
                                                 <h4>
-                                                    <strong>সেবা প্রদানের তথ্য</strong>
-                                                    <div class="btn-group float-right" style="float:right;">
-                                                        
-                                                        <a class="btn btn-sm btn-info" href="#">Pending</a>                                                        
-                                                        <a class="btn btn-sm btn-success" href="#">Approved</a>
-                                                        
-                                                        <a class="btn btn-sm btn-secondary" href="#">ALL</a>
-                                                    </div>
+                                                    <strong>কমিশনের তথ্য</strong>
                                                 </h4>
                                                 <!-- Modal -->
                                                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -323,27 +316,7 @@
                                                                     </th>
                                                                     <th class="sorting" colspan="1" rowspan="1">
                                                                         <div class="s_sizing" style=" overflow: hidden;">
-                                                                            জন্ম তারিখ
-                                                                        </div>
-                                                                    </th>
-                                                                    <th class="sorting" colspan="1" rowspan="1">
-                                                                        <div class="s_sizing">
-                                                                            পেমেন্ট
-                                                                        </div>
-                                                                    </th>
-                                                                    <th class="sorting" colspan="1" rowspan="1">
-                                                                        <div class="s_sizing">
-                                                                            তারিখ
-                                                                        </div>
-                                                                    </th>
-                                                                    <th class="sorting" colspan="1" rowspan="1">
-                                                                        <div class="s_sizing">
-                                                                            স্ট্যাটাস
-                                                                        </div>
-                                                                    </th>
-                                                                    <th class="sorting" colspan="1" rowspan="1">
-                                                                        <div class="s_sizing">
-                                                                            একশন
+                                                                            কমিশনের পরিমাণ
                                                                         </div>
                                                                     </th>
                                                                 </tr>
@@ -352,17 +325,12 @@
                                                                 <tr id="tr-5" role="row" class="odd">
                                                                     <td style="width: 2%" class="sorting_1">০১</td>
                                                                     <td>90124419875</td>
-                                                                    <td>02-08-1989</td>
-                                                                    <td>Pending</td>
-                                                                    <td>16-08-2023</td>	
-                                                                    <td>Pending</td>	
-                                                                    <td class="text-center" style="width: 15%">
-                                                                        <div class="btn-group">
-                                                                            <a class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa fa-upload text-white"></i></a> 
-                                                                            <a class="btn btn-sm btn-warning"><i class="fa fa-edit text-white"></i></a>
-                                                                            <a class="btn btn-sm btn-info"><i class="fa fa-eye text-white"></i></a>
-                                                                        </div>							
-                                                                    </td>
+                                                                    <td>১০০ টাকা</td>
+                                                                </tr>
+                                                                <tr id="tr-5" role="row" class="">
+                                                                    <td style="width: 2%" class="sorting_1">০২</td>
+                                                                    <td>90124419875</td>
+                                                                    <td>১০০ টাকা</td>
                                                                 </tr>
                                                             </tbody>
                                                         </table>
