@@ -83,7 +83,7 @@
             <!-- start header -->
             <nav class="sidebar">
                 <div class="sidebar-header">
-                    <a href="index.html" class="sidebar-brand">
+                    <a href="" class="sidebar-brand">
                         দলিল<span> সেবা</span>
                     </a>
                     <div class="sidebar-toggler not-active">
@@ -98,34 +98,64 @@
                             ড্যাশবোর্ড
                         </li>
                         <li class="text-capitalize active nav-item ">
-                            <a class="active text-capitalize waves-effect nav-link" href="index.html">
+                            <a class="active text-capitalize waves-effect nav-link" href="admin-dashboard.html">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-box link-icon"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
                                 <span class="link-title">ড্যাশবোর্ড</span>
                             </a>
                         </li>
-                        
-                        
-                        
+                        <li class="text-capitalize  nav-item nav-category ">
+                            ইউজার ম্যানেজমেন্ট
+                        </li>
+                        <li class="text-capitalize  nav-item ">
+                            <a class=" text-capitalize waves-effect nav-link" href="setup/user.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user-check link-icon"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><polyline points="17 11 19 13 23 9"></polyline></svg>
+                                <span class="link-title">User</span>
+                            </a>
+                        </li>
                         <li class="text-capitalize  nav-item nav-category ">
                             সেবার হিসাব
                         </li>
                         <li class="text-capitalize  nav-item ">
-                            <a class=" text-capitalize waves-effect nav-link" href="editor-commission.html">
+                            <a class=" text-capitalize waves-effect nav-link" href="deposit.html">
+                                <i class="fas fa-money-check-alt"></i>
+                                <span class="link-title">রিচার্জ/ জমা</span>
+                            </a>
+                        </li>
+                        <li class="text-capitalize nav-item ">
+                            <a class=" text-capitalize waves-effect nav-link" href="expense.html">
+                                <i class="fas fa-donate"></i>
+                                <span class="link-title">
+                                    ব্যয় সমূহ
+                                </span>
+                            </a>
+                        </li>
+                        <li class="text-capitalize  nav-item ">
+                            <a class=" text-capitalize waves-effect nav-link" href="commission.html">
                                 <i class="far fa-money-bill-alt"></i>
                                 <span class="link-title">
                                     কমিশন
                                 </span>
                             </a>
                         </li>
-                        
-                        
-                        
-                        
-                        
-                        
-                        
+                        <li class="text-capitalize  nav-item nav-category ">
+                        সেটিংস
+                        </li>
+                        <li class="text-capitalize  nav-item ">
+                            <a class=" text-capitalize waves-effect nav-link" href="">
+                                <i class="fas fa-cog"></i>
+                                <span class="link-title">System Settings</span>
+                            </a>
+                        </li>
+                        <li class="text-capitalize nav-item ">
+                            <a class=" text-capitalize waves-effect nav-link" href="">
+                                <i class="fas fa-user-cog"></i>
+                                <span class="link-title">
+                                    User Settings
+                                </span>
+                            </a>
+                        </li>
                     </ul>
-                <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></div>
+                </div>
             </nav>
             <!-- end header -->
             <div class="page-wrapper">
@@ -2136,6 +2166,38 @@
                                                                         <div class="form-group pt-1 pb-1 mb-3">
                                                                             <label for="place" class="font-black">গ্রাম/বাড়ি/হোল্ডিং/রোড/ব্লক/সেক্টর</label>
                                                                             <input type="text" class="form-control" name="place" id="place" placeholder="আপনার এলাকার নাম লিখুন" value="চাখার" required="">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <div class="form-group py-1 mb-3">
+                                                                            <label for="division_id" class="font-black">অফিস</label>
+                                                                            <select name="division_id" id="division_id" class="js-example-basic-single form-select select2-hidden-accessible" data-width="100%" data-select2-id="division_id" tabindex="-1" aria-hidden="true">
+                                                                                <option disabled="" selected="">-- অফিস নির্বাচন করুন --</option>
+                                                                                <option value="8">
+                                                                                    চাখার
+                                                                                </option>
+                                                                                <option value="7">
+                                                                                    উজিরপুর
+                                                                                </option>
+                                                                                <option value="6">
+                                                                                    রহমতপুর
+                                                                                </option>
+                                                                                <option value="5" selected="" data-select2-id="2">
+                                                                                    সিলেট
+                                                                                </option>
+                                                                                <option value="4">
+                                                                                    বরিশাল
+                                                                                </option>
+                                                                                <option value="3">
+                                                                                    খুলনা
+                                                                                </option>
+                                                                                <option value="2">
+                                                                                    রাজশাহী
+                                                                                </option>
+                                                                                <option value="1">
+                                                                                    চট্টগ্রাম
+                                                                                </option>
+                                                                            </select>
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-md-6">
