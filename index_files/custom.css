@@ -143,7 +143,7 @@ th {
     border-top: 0;
     font-weight: 500;
     font-size: 12px;
-    text-transform: uppercase;
+    text-transform: none;
     color: #5d646a;
 }
 

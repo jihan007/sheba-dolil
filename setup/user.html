@@ -134,7 +134,7 @@
                             </a>
                         </li>
                         <li class="text-capitalize  nav-item nav-category ">
-                        সেটিংস
+                            সেটিংস
                         </li>
                         <li class="text-capitalize  nav-item ">
                             <a class=" text-capitalize waves-effect nav-link" href="deposit.html">
@@ -222,68 +222,157 @@
                             <section id="front-managment" class="w-100">
                                 
                                 <div class="row">
-                                    <div class="col-md-6 col-lg-3 col-sm-6 grid-margin stretch-card">
-                                        <div class="card position-relative border-primary">
-                                            <a href="">
-                                                <div class="card-body">
-                                                    <div class="d-flex justify-content-between align-items-baseline">
-                                                        <h6 class="card-title mb-2 text-primary"><b>মোট সেবা সংখ্যা</b></h6>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-12">
-                                                            <h3 class="mb-2">২৯ টি</h3>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <i class="bx bx-bookmark-minus card-bg-icon text-secondary"></i>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="col-md-6 col-lg-3 col-sm-6 grid-margin stretch-card">
-                                        <div class="card position-relative border-danger">
-                                            <div class="card-body">
-                                                <div class="d-flex justify-content-between align-items-baseline">
-                                                    <h6 class="card-title mb-2 text-danger"><b>মোট কমিশন</b></h6>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-12">
-                                                        <h3 class="mb-2">০ টাকা</h3>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <i class="bx bx-wallet-alt card-bg-icon text-secondary"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="row">
                                     <div class="col-md-12 stretch-card">
-                                        <div class="card">                                            
-                                            <div class="card-body pb-0">                                                
-                                                <h4 class="mb-3">
-                                                    <strong>সেবা প্রদানের তথ্য</strong>
+                                        
+                                        <div class="card">
+                                            
+                                            <div class="card-body pb-0">
+                                                <h4>
+                                                    <strong>Users</strong>					
+                                                    <a class="btn btn-success btn-sm text-white" style="float: right" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class=" fa fa-plus"></i>&nbsp;New User</a>
                                                 </h4>
                                                 
-                                                <div class="form-group custom-col-7 row">
-                                                    <div class="col-md-3 mb-3">
-                                                        <label for="date_from">Date From</label>
-                                                        <input type="date" name="date_from" id="date_from" class="form-control" autocomplete="off" value="">
-                                                    </div>
-                                                    <div class="col-md-3 mb-3">
-                                                        <label for="date_to">Date To</label>
-                                                        <input type="date" name="date_to" id="date_to" class="form-control" autocomplete="off" value="">
-                                                    </div>
-                                                    <div class="col-md-3 mb-3">
-                                                        <label for="nid_no">NID Number</label>
-                                                        <input type="number" name="nid_no" id="nid_no" class="form-control" placeholder="NID Number in English" autocomplete="off">
-                                                    </div>
-                                                    <div class="col-md-2 d-flex align-items-end mb-3">
-                                                        <button type="submit" class="btn btn-block btn-success mt-0 ">
-                                                            <i fill="currentColor" class="text-white " style="display: inline-block;"><svg fill="currentColor" height="16" width="16" viewBox="0 0 1664 1792" style="display: inline-block; vertical-align: middle;"><path d="M1152 832q0-185-131.5-316.5t-316.5-131.5-316.5 131.5-131.5 316.5 131.5 316.5 316.5 131.5 316.5-131.5 131.5-316.5zM1664 1664q0 52-38 90t-90 38q-54 0-90-38l-343-342q-179 124-399 124-143 0-273.5-55.5t-225-150-150-225-55.5-273.5 55.5-273.5 150-225 225-150 273.5-55.5 273.5 55.5 225 150 150 225 55.5 273.5q0 220-124 399l343 343q37 37 37 90z"></path></svg></i><span>&nbsp;Search</span>
-                                                        </button>
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog modal-lg">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h1 class="modal-title fs-5" id="exampleModalLabel">New User</h1>
+                                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body" id="modal-body"><form action="https://dw.dolil.com/setups/admins" method="post" id="create-form" enctype="multipart/form-data"> 
+                                                                <div class="form-group row">
+                                                                    <div class="col-md-6 mb-3">
+                                                                        <label for="office_id_"><strong>Choose Office :</strong></label>
+                                                                        <select name="office_id" id="office_id_" class="form-control select2bs4 select2-hidden-accessible" data-select2-id="office_id_" tabindex="-1" aria-hidden="true">
+                                                                            <option value="0" data-select2-id="1042">All Offices</option>
+                                                                            <option value="429">০০০০০০ - সাব-রেজিস্ট্রার এর কার্যালয়, কাজিহাটি, চট্টগ্রাম</option>
+                                                                            <option value="34">000000 - সাব-রেজিস্ট্রার এর কার্যালয়, আশুলিয়া, ঢাকা</option>
+                                                                            <option value="479">105444 - সাব-রেজিস্ট্রার এর কার্যালয়, আমতলী, বরগুনা</option>
+                                                                            <option value="480">105445 - সাব-রেজিস্ট্রার এর কার্যালয়, বামনা, বরগুনা</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="col-md-6 mb-3">
+                                                                        <label for="name"><strong>Name :</strong></label>
+                                                                        <input type="text" class="form-control" name="name" id="name">
+                                                                    </div>
+                                                                    <div class="col-md-6 mb-3">
+                                                                        <label for="username"><strong>Username :</strong></label>
+                                                                        <input type="text" class="form-control" name="username" id="username">
+                                                                    </div>
+                                                                    <div class="col-md-6 mb-3">
+                                                                        <label for="password"><strong>Password :</strong></label>
+                                                                        <input type="password" class="form-control" name="password" id="password">
+                                                                    </div>
+                                                                    <div class="col-md-6 mb-3">
+                                                                        <label for="password_confirmation"><strong>Confirm Password :</strong></label>
+                                                                        <input type="password" class="form-control" name="password_confirmation" id="password_confirmation">
+                                                                    </div>
+                                                                    <div class="col-md-6 mb-3">
+                                                                        <div class="form-check form-switch">
+                                                                            <input class="form-check-input" type="checkbox" role="switch" id="manual-payment">
+                                                                            <label class="form-check-label" for="manual-payment">&nbsp;Manual Payment</label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-6 mb-3">
+                                                                        <label for="user-quota"><strong>User Quota :</strong></label>
+                                                                        <input type="number" class="form-control" name="user_quota" id="user_quota">
+                                                                    </div>
+                                                                    <div class="col-md-6 mb-3">
+                                                                        <label for="user-commission"><strong>Comission Rate :</strong></label>
+                                                                        <input type="number" class="form-control" name="user_commission" id="user_commission">
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                                <div class="form-group mb-3">
+                                                                    <label for="role_id"><strong>Role :</strong></label>
+                                                                    <br>
+                                                                    <div class="icheck-success d-inline">
+                                                                        <input type="radio" id="status-radio-3" name="role_id" value="3" checked="">
+                                                                        <label for="status-radio-3" class="text-success">
+                                                                            সাধারন ব্যবহারকারী&nbsp;&nbsp;
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="icheck-success d-inline">
+                                                                        <input type="radio" id="status-radio-4" name="role_id" value="4">
+                                                                        <label for="status-radio-4" class="text-success">
+                                                                            অফিসার&nbsp;&nbsp;
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="icheck-success d-inline">
+                                                                        <input type="radio" id="status-radio-5" name="role_id" value="5">
+                                                                        <label for="status-radio-5" class="text-success">
+                                                                            দলিল লেখক&nbsp;&nbsp;
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="icheck-success d-inline">
+                                                                        <input type="radio" id="status-radio-6" name="role_id" value="6">
+                                                                        <label for="status-radio-6" class="text-success">
+                                                                            আইনজীবী&nbsp;&nbsp;
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="icheck-success d-inline">
+                                                                        <input type="radio" id="status-radio-7" name="role_id" value="7">
+                                                                        <label for="status-radio-7" class="text-success">
+                                                                            কম্পিউটার কম্পোজকারক&nbsp;&nbsp;
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                                <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i>&nbsp; Save Admin</button>
+                                                            </form>
+                                                            <script type="text/javascript">
+                                                                CKEDITOR.replaceAll( 'textarea' );
+                                                                $('.select2bs4').select2({
+                                                                    theme: 'bootstrap4'
+                                                                });
+                                                            </script></div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                            </div>
+                                                        </div>											
                                                     </div>
                                                 </div>
+                                                <!--/ Modal -->
+                                                
+                                                <div class="row">
+                                                    <div class="col-md-2 mb-3">
+                                                        <select class="form-control select2bs4 select2-hidden-accessible" name="admin" id="admin" onchange="searchMe()" data-select2-id="admin" tabindex="-1" aria-hidden="true">
+                                                            <option value="1" selected="" data-select2-id="2">Admins</option>
+                                                            <option value="0">Users</option>
+                                                        </select>						
+                                                    </div>
+                                                    <div class="col-md-2 mb-3">
+                                                        <select class="form-control select2bs4 select2-hidden-accessible" name="role_id" id="role_id" onchange="searchMe()" data-select2-id="role_id" tabindex="-1" aria-hidden="true">
+                                                            <optgroup>
+                                                                <option value="0" data-select2-id="4">All User Roles</option>
+                                                                <option value="3">সাধারন ব্যবহারকারী</option>
+                                                            </optgroup>
+                                                            <option value="4">অফিসার</option>
+                                                            
+                                                            <option value="5">দলিল লেখক</option>
+                                                            
+                                                            <option value="6">আইনজীবী</option>
+                                                            
+                                                            <option value="7">কম্পিউটার কম্পোজকারক</option>
+                                                            
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <select class="form-control select2bs4 select2-hidden-accessible" name="office_id" id="office_id" onchange="searchMe()" data-select2-id="office_id" tabindex="-1" aria-hidden="true">
+                                                            <optgroup>
+                                                                <option value="0" data-select2-id="6">All Offices</option>
+                                                                <option value="429">০০০০০০ - সাব-রেজিস্ট্রার এর কার্যালয়, কাজিহাটি, চট্টগ্রাম</option>
+                                                            </optgroup>
+                                                            <option value="34">000000 - সাব-রেজিস্ট্রার এর কার্যালয়, আশুলিয়া, ঢাকা</option>
+                                                            
+                                                            <option value="479">105444 - সাব-রেজিস্ট্রার এর কার্যালয়, আমতলী, বরগুনা</option>
+                                                            
+                                                            <option value="480">105445 - সাব-রেজিস্ট্রার এর কার্যালয়, বামনা, বরগুনা</option>
+                                                            
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <hr>
                                             </div>
                                             
                                             
@@ -301,49 +390,69 @@
                                                                     </th>
                                                                     <th class="sorting" colspan="1" rowspan="1">
                                                                         <div class="s_sizing">
-                                                                            NID নম্বর
+                                                                            Name
                                                                         </div>
                                                                     </th>
                                                                     <th class="sorting" colspan="1" rowspan="1">
                                                                         <div class="s_sizing" style=" overflow: hidden;">
-                                                                            জন্ম তারিখ
+                                                                            Username
                                                                         </div>
                                                                     </th>
                                                                     <th class="sorting" colspan="1" rowspan="1">
                                                                         <div class="s_sizing">
-                                                                            পেমেন্ট
+                                                                            User Role
                                                                         </div>
                                                                     </th>
                                                                     <th class="sorting" colspan="1" rowspan="1">
                                                                         <div class="s_sizing">
-                                                                            তারিখ
+                                                                            Office
                                                                         </div>
                                                                     </th>
                                                                     <th class="sorting" colspan="1" rowspan="1">
                                                                         <div class="s_sizing">
-                                                                            স্ট্যাটাস
+                                                                            Manual Payment
                                                                         </div>
                                                                     </th>
                                                                     <th class="sorting" colspan="1" rowspan="1">
                                                                         <div class="s_sizing">
-                                                                            একশন
+                                                                            Quota
+                                                                        </div>
+                                                                    </th>
+                                                                    <th class="sorting" colspan="1" rowspan="1">
+                                                                        <div class="s_sizing">
+                                                                            Commission
+                                                                        </div>
+                                                                    </th>
+                                                                    <th class="sorting" colspan="1" rowspan="1">
+                                                                        <div class="s_sizing">
+                                                                            Image
+                                                                        </div>
+                                                                    </th>
+                                                                    <th class="sorting" colspan="1" rowspan="1">
+                                                                        <div class="s_sizing">
+                                                                            Actions
                                                                         </div>
                                                                     </th>
                                                                 </tr>
                                                             </thead>											
                                                             <tbody>
                                                                 <tr id="tr-5" role="row" class="odd">
-                                                                    <td style="width: 2%" class="sorting_1">০১</td>
-                                                                    <td>90124419875</td>
-                                                                    <td>02-08-1989</td>
-                                                                    <td>Pending</td>
-                                                                    <td>16-08-2023</td>	
-                                                                    <td>Pending</td>	
+                                                                    <td style="width: 2%" class="sorting_1">01</td>
+                                                                    <td>Limon</td>
+                                                                    <td>01722441972</td>
+                                                                    <td>Citizen</td>
+                                                                    <td>Chakhar</td>	
+                                                                    <td>Allowd</td>	
+                                                                    <td>100 Per Day</td>
+                                                                    <td>10 Tk</td>
+                                                                    <td></td>
                                                                     <td class="text-center" style="width: 15%">
-                                                                        <div class="btn-group">
-                                                                            <a class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa fa-upload text-white"></i></a> 
-                                                                            <a class="btn btn-sm btn-warning"><i class="fa fa-edit text-white"></i></a>
-                                                                            <a class="btn btn-sm btn-info"><i class="fa fa-eye text-white"></i></a>
+                                                                        <div class="">
+                                                                            <a class="btn btn-sm btn-success" onclick="ToggleStatus($(this),'users','1234')"><i class="fa fa-check text-white"></i></a>
+                                                                            
+                                                                            <a class="btn btn-sm btn-info" onclick="Show('Edit User','https://dw.dolil.com/setups/admins/1234/edit')"><i class="fa fa-edit text-white"></i></a>
+                                                                            
+                                                                            <a class="btn btn-sm btn-danger" onclick="Delete('1234','https://dw.dolil.com/setups/admins')"><i class="fa fa-trash text-white"></i></a>
                                                                         </div>							
                                                                     </td>
                                                                 </tr>
@@ -438,4 +547,4 @@
     
     
     
-</body></html>                                                                                                                                                    
+</body></html>                                                                                                                                                                    
