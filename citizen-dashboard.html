@@ -99,6 +99,23 @@
                                 <span class="link-title">ড্যাশবোর্ড</span>
                             </a>
                         </li>
+                        <li class="text-capitalize  nav-item nav-category ">
+                            সেবার হিসাব
+                        </li>
+                        <li class="text-capitalize  nav-item ">
+                            <a class=" text-capitalize waves-effect nav-link" href="deposit.html">
+                                <i class="fas fa-money-check-alt"></i>
+                                <span class="link-title">রিচার্জ/ জমা</span>
+                            </a>
+                        </li>
+                        <li class="text-capitalize nav-item ">
+                            <a class=" text-capitalize waves-effect nav-link" href="expense.html">
+                                <i class="fas fa-donate"></i>
+                                <span class="link-title">
+                                    ব্যয় সমূহ
+                                </span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </nav>
@@ -170,6 +187,7 @@
                                             <div class="card-body pb-0">
                                                 <h4>
                                                     <strong>সেবা প্রদানের তথ্য</strong>
+                                                    <a class="btn btn-sm btn-success" style="float:right;" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa fa-plus text-white"></i>&nbsp;NID রিকুয়েস্ট যুক্ত করুন</a>
                                                 </h4>
                                             </div>
                                             
@@ -195,6 +213,31 @@
                                                         </button>
                                                     </div>
                                                 </div>
+                                                
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog modal-lg">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h1 class="modal-title fs-5" id="exampleModalLabel">NID রিকুয়েস্ট যুক্ত করুন</h1>
+                                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <form>
+                                                                    <div class="row mb-3">
+                                                                        <div class="col-md-12 "><table class="table table-bordered"><thead><tr><th scope="col">Office Name</th><th scope="col">NID নম্বর</th><th scope="col">জন্ম তারিখ</th><th scope="col">পেমেন্ট</th><th scope="col">Actions</th></tr></thead><tbody><tr><td><div><div class=" css-b62m3t-container"><div class="custom-select__control css-d6csv6-control"><div class="custom-select__value-container css-hlgwow"><div class="custom-select__placeholder css-1jqq78o-placeholder" id="react-select-4-placeholder">চাখার, বরিশাল</div><div class="custom-select__input-container css-19bb58m" data-value=""><input class="custom-select__input" autocapitalize="none" autocomplete="off" autocorrect="off" id="react-select-4-input" spellcheck="false" tabindex="0" type="text" aria-autocomplete="list" aria-expanded="false" aria-haspopup="true" role="combobox" aria-describedby="react-select-4-placeholder" value="" style="color: inherit; background: 0px center; opacity: 1; width: 100%; grid-area: 1 / 2 / auto / auto; font: inherit; min-width: 2px; border: 0px; margin: 0px; outline: 0px; padding: 0px;"></div></div><div class="custom-select__indicators css-1wy0on6"></div></div><input name="land_class_id" type="hidden" value=""></div></div></td><td><input type="number" name="land_amount" class="form-control" value=""></td><td><div><div class=" css-b62m3t-container"><span id="react-select-5-live-region" class="css-7pg0cj-a11yText"></span><span aria-live="polite" aria-atomic="false" aria-relevant="additions text" class="css-7pg0cj-a11yText"></span><div class="custom-select__control css-d6csv6-control"><div class="custom-select__value-container css-hlgwow"><div class="custom-select__placeholder css-1jqq78o-placeholder" id="react-select-5-placeholder">০২/১১/১৯৮৯</div><div class="custom-select__input-container css-19bb58m" data-value=""><input class="custom-select__input" autocapitalize="none" autocomplete="off" autocorrect="off" id="react-select-5-input" spellcheck="false" tabindex="0" type="text" aria-autocomplete="list" aria-expanded="false" aria-haspopup="true" role="combobox" aria-describedby="react-select-5-placeholder" value="" style="color: inherit; background: 0px center; opacity: 1; width: 100%; grid-area: 1 / 2 / auto / auto; font: inherit; min-width: 2px; border: 0px; margin: 0px; outline: 0px; padding: 0px;"></div></div><div class="custom-select__indicators css-1wy0on6"></div></div><input name="land_unit_id" type="hidden" value=""></div></div></td><td><input type="number" name="land_price" class="form-control" value=""></td><td class="d-flex align-items-center justify-content-around"><button type="button" class="btn btn-danger btn-md"><i fill="currentColor" class="text-white " style="display: inline-block;"><svg fill="currentColor" height="10" width="10" viewBox="0 0 1408 1792" style="display: inline-block; vertical-align: middle;"><path d="M1408 736v192q0 40-28 68t-68 28h-1216q-40 0-68-28t-28-68v-192q0-40 28-68t68-28h1216q40 0 68 28t28 68z"></path></svg></i></button><button type="button" class="btn btn-success btn-md"><i fill="currentColor" class="text-white " style="display: inline-block;"><svg fill="currentColor" height="10" width="10" viewBox="0 0 1408 1792" style="display: inline-block; vertical-align: middle;"><path d="M1408 736v192q0 40-28 68t-68 28h-416v416q0 40-28 68t-68 28h-192q-40 0-68-28t-28-68v-416h-416q-40 0-68-28t-28-68v-192q0-40 28-68t68-28h416v-416q0-40 28-68t68-28h192q40 0 68 28t28 68v416h416q40 0 68 28t28 68z"></path></svg></i></button></td></tr></tbody></table></div>
+                                                                    </div>
+                                                                    
+                                                                    <button type="submit" class="btn btn-success"><i class="far fa-check-square"></i>&nbsp;&nbsp;Submit</button>
+                                                                </form>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                            </div>
+                                                        </div>											
+                                                    </div>
+                                                </div>
+                                                <!--/ Modal -->
                                                 
                                                 <div id="_wrapper" class=" dt-bootstrap4 no-footer">
                                                     <div class="s_scroll">										
@@ -223,6 +266,11 @@
                                                                     </th>
                                                                     <th class="sorting" colspan="1" rowspan="1">
                                                                         <div class="s_sizing">
+                                                                            আবেদনের স্ট্যাটাস
+                                                                        </div>
+                                                                    </th>
+                                                                    <th class="sorting" colspan="1" rowspan="1">
+                                                                        <div class="s_sizing">
                                                                             একশন
                                                                         </div>
                                                                     </th>
@@ -233,7 +281,8 @@
                                                                     <td style="width: 2%" class="sorting_1">০১</td>
                                                                     <td>90124419875</td>
                                                                     <td>02-08-1989</td>
-                                                                    <td>16-08-2023</td>	
+                                                                    <td>16-08-2023</td>
+                                                                    <td>Pending</td>
                                                                     <td class="text-center" style="width: 15%">
                                                                         <div class="btn-group">
                                                                             <a class="btn btn-sm btn-info"><i class="fa fa-eye text-white"></i></a>
