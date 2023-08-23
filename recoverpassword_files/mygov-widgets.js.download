@@ -1,0 +1,58 @@
+let widget = `<span class="sso-icon" id="দলিল সেবা-sso-handle">
+                    <img src="https://beta-idp.stage.দলিল সেবা.bd/img/widget-round.png">
+                </span>
+                <div id="দলিল সেবা-sso-box" class="apps-icon" style="display: none;">
+                    <ul id="getDynamicWidgets"></ul>
+                </div>`;
+
+// Make a request for a user with a given access token
+fetch("/দলিল সেবা-widgets")
+    .then((response) => response.json())
+    .then((data) => {
+        let oidcClients = data.clients;
+
+        let innerWidgets = "";
+
+        oidcClients.map((item) => {
+            innerWidgets += `<li>
+            <a href="${item.url ? item.url : `#`}" target="_blank">
+                <div class="app-info">
+                    <div class="app-logo">
+                    ${
+                        item.logo
+                            ? `<img src="${item.logo}" class="img-fluid">`
+                            : item.name
+                    }
+                        
+                    </div>
+                </div>
+            </a>
+        </li>`;
+        });
+
+        document.getElementById("getDynamicWidgets").innerHTML = innerWidgets;
+    })
+    .catch((e) => {
+        // Handle Errors
+        document.getElementById(
+            "getDynamicWidgets"
+        ).innerHTML = `<b>Processing ...</b>`;
+    });
+
+document.getElementById("দলিল সেবা-sso-widget").innerHTML = widget;
+
+/***Toggled for Widgest Button**/
+document.getElementById("দলিল সেবা-sso-handle").addEventListener("click", (e) => {
+    let x = document.getElementById("দলিল সেবা-sso-box");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+    e.stopPropagation();
+});
+
+/***Hide Elements after click any dom***/
+document.addEventListener("click", function () {
+    document.getElementById("দলিল সেবা-sso-box").style.display = "none";
+});

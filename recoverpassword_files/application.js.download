@@ -1,0 +1,318 @@
+jQuery(document).ready(function ($) {
+  if (
+    $('input[name="new_password"]').is(":visible") &&
+    $('input[name="retype_password"]').is(":visible")
+  ) {
+    $("#mismatch-error").css("color", "red").hide();
+    $("#password-length-error").css("color", "red").hide();
+    // password-length-error
+    $('input[name="new_password"], input[name="retype_password"]').on(
+      "keyup",
+      function () {
+        if (
+          $('input[name="new_password"]').val() ==
+          $('input[name="retype_password"]').val()
+        ) {
+          $("#mismatch-error").hide();
+        } else {
+          $("#mismatch-error").show();
+        }
+        if (
+          $('input[name="new_password"]').val().length < 8 ||
+          $('input[name="retype_password"]').val().length < 8
+        ) {
+          $("#password-length-error").show();
+        } else {
+          $("#password-length-error").hide();
+        }
+      }
+    );
+  }
+
+  if ($(".otpCode").length) {
+    $(".otpCodeFirst").focus();
+
+    $(".otpCode").on("keyup", function (e) {
+      try {
+        var charCode = e.which ? e.which : e.keyCode;
+        if (
+          (charCode >= 48 && charCode <= 57) ||
+          (charCode >= 96 && charCode <= 105)
+        ) {
+          var inputs = $(this).closest("form").find(":input");
+          inputs.eq(inputs.index(this) + 1).focus();
+        }
+      } catch (err) {}
+    });
+  }
+
+  if ($("#change-password").is(":visible")) {
+    $("#change-password").on("click", function () {
+      $("#mismatch-error").hide();
+      if (
+        $('input[name="new_password"]').val() !=
+        $('input[name="retype_password"]').val()
+      ) {
+        $("#mismatch-error").show();
+        return false;
+      } else if ($('input[name="new_password"]').val().length < 8) {
+        return false;
+      } else $("form#form-change-password").submit();
+    });
+  }
+
+  // if ($("#sso-widget").length) $("#sso-widget").ssoWidget({}); // Disabled by RK
+
+  $(".show-password").on("click", function () {
+    if ($(this).hasClass("fa-eye")) {
+      $(this).removeClass("fa-eye");
+      $(this).addClass("fa-eye-slash");
+      $(this).parent(".my-form-group").find("input").attr("type", "text");
+    } else {
+      $(this).addClass("fa-eye");
+      $(this).removeClass("fa-eye-slash");
+      $(this).parent(".my-form-group").find("input").attr("type", "password");
+    }
+  });
+
+  $("#verify-nid").on("click", function () {
+    $("#nid-verify-request").hide();
+    $("#confirm-nid-info").prop("checked", false);
+    //$('#view-dob').html($('input[name="date_of_birth"]').val());
+    //$('#view-nid').html($('input[name="nid"]').val());
+  });
+
+  $("#confirm-nid-info").on("click", function () {
+    $("#nid-verify-request").hide();
+    if ($(this).is(":checked")) $("#nid-verify-request").show();
+  });
+
+  // if ($(".date input").is(":visible")) {
+  //     $(".date input").datepicker({
+  //         format: "dd-mm-yyyy",
+  //         //language: "bn"
+  //     });
+  // } // Disabled by RK
+
+  if ($("span#upload-avator").is(":visible")) {
+    $("span#upload-avator").on("click", function (e) {
+      $("input#upload-avator-file").trigger("click");
+      e.stopImmediatePropagation();
+      e.preventDefault();
+    });
+
+    var $modal = $("#resize-modal");
+    var image = document.getElementById("imageResize");
+    var cropper;
+
+    var resizeForm = $("#upload-photo-form");
+    var imageName = "";
+    var resizeWidth = 0;
+    var resizeHeight = 0;
+
+    $("body").on("change", "input#upload-avator-file", function (e) {
+      imageName = $(this).attr("name");
+      resizeWidth = 160;
+      resizeHeight = 160;
+
+      $(".previewResize").css("width", resizeWidth);
+      $(".previewResize").css("height", resizeHeight);
+
+      var files = e.target.files;
+      var done = function (url) {
+        image.src = url;
+        // $modal.modal('show');
+        $("#resize-modal").modal("show");
+        $("#resize-modal").css("padding", "0");
+        $("#resize-modal").css("background", "url(img/black-bg.png)");
+      };
+      var reader;
+      var file;
+      var url;
+
+      if (files && files.length > 0) {
+        file = files[0];
+
+        if (URL) {
+          done(URL.createObjectURL(file));
+        } else if (FileReader) {
+          reader = new FileReader();
+          reader.onload = function (e) {
+            done(reader.result);
+          };
+          reader.readAsDataURL(file);
+        }
+      }
+    });
+
+    $modal
+      .on("shown.bs.modal", function () {
+        cropper = new Cropper(image, {
+          aspectRatio: resizeWidth / resizeHeight,
+          viewMode: 1,
+        });
+      })
+      .on("hidden.bs.modal", function () {
+        cropper.destroy();
+        cropper = null;
+      });
+
+    $("#crop").click(function () {
+      canvas = cropper.getCroppedCanvas({
+        width: resizeWidth,
+        height: resizeHeight,
+      });
+      canvas.toBlob(function (blob) {
+        url = URL.createObjectURL(blob);
+        var reader = new FileReader();
+        reader.readAsDataURL(blob);
+        reader.onloadend = function () {
+          var base64data = reader.result;
+          resizeForm.append(
+            '<input type="hidden" name="profilePhoto" value="' +
+              base64data +
+              '">'
+          );
+          $modal.modal("hide");
+          $("#upload-photo-form").submit();
+        };
+      });
+    });
+  }
+});
+
+function isNumber(evt) {
+  evt = evt ? evt : window.event;
+  var charCode = evt.which ? evt.which : evt.keyCode;
+  if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+    return false;
+  }
+  return true;
+}
+
+function checkChangePassword() {
+  var oldpassword = document.getElementById("oldpassword").value;
+  var newpassword = document.getElementById("newpassword").value;
+  var retypepassword = document.getElementById("retypepassword").value;
+
+  if (oldpassword == "") {
+    document.getElementById("current-error").innerHTML =
+      "Please enter your current password";
+    $("#current-error").show(500);
+    $("#current-error").delay(4000);
+    $("#current-error").animate(
+      {
+        height: "toggle",
+      },
+      500,
+      function () {
+        // Animation complete.
+      }
+    );
+    return false;
+  } else if (oldpassword.length < 8) {
+    document.getElementById("current-error").innerHTML =
+      "পাসওয়ার্ড ৮ অক্ষরের হতে হবে";
+    $("#current-error").show(500);
+    $("#current-error").delay(4000);
+    $("#current-error").animate(
+      {
+        height: "toggle",
+      },
+      500,
+      function () {
+        // Animation complete.
+      }
+    );
+    return false;
+  } else if (newpassword == "") {
+    document.getElementById("new-error").innerHTML =
+      "Please enter your new password";
+    $("#new-error").show(500);
+    $("#new-error").delay(4000);
+    $("#new-error").animate(
+      {
+        height: "toggle",
+      },
+      500,
+      function () {
+        // Animation complete.
+      }
+    );
+    return false;
+  } else if (newpassword.length < 8) {
+    document.getElementById("new-error").innerHTML =
+      "পাসওয়ার্ড ৮ অক্ষরের হতে হবে";
+    $("#new-error").show(500);
+    $("#new-error").delay(4000);
+    $("#new-error").animate(
+      {
+        height: "toggle",
+      },
+      500,
+      function () {
+        // Animation complete.
+      }
+    );
+    return false;
+  } else if (retypepassword == "") {
+    document.getElementById("confirm-error").innerHTML =
+      "Please enter your confirm password";
+    $("#confirm-error").show(500);
+    $("#confirm-error").delay(4000);
+    $("#confirm-error").animate(
+      {
+        height: "toggle",
+      },
+      500,
+      function () {
+        // Animation complete.
+      }
+    );
+    return false;
+  } else if (retypepassword.length < 8) {
+    document.getElementById("confirm-error").innerHTML =
+      "পাসওয়ার্ড ৮ অক্ষরের হতে হবে";
+    $("#confirm-error").show(500);
+    $("#confirm-error").delay(4000);
+    $("#confirm-error").animate(
+      {
+        height: "toggle",
+      },
+      500,
+      function () {
+        // Animation complete.
+      }
+    );
+    return false;
+  }
+}
+
+// Language Switcher
+var url = "/change";
+$('[type="checkbox"]').click(function (e) {
+  var isChecked = $(this).is(":checked");
+  if (isChecked == true) {
+    window.location.href = url + "?lang=en";
+  } else {
+    window.location.href = url + "?lang=bn";
+  }
+});
+
+// Button Disabled
+$("#submitForm").submit(function (e) {
+  $(this).find("button[type=submit]").prop("disabled", true);
+});
+// Button Disabled only for change password
+$("#form-change-password").submit(function (e) {
+  $(this).find("button[type=submit]").prop("disabled", true);
+});
+
+function seePasswordToggled(input_id = "see-password") {
+  let passwordField = document.getElementById(input_id);
+  if (passwordField.type === "password") {
+    passwordField.type = "text";
+  } else {
+    passwordField.type = "password";
+  }
+}
