@@ -26,10 +26,6 @@ h1, h2, h3, h4, h5, h6, p, small, label, input, select, option, textarea, a, cen
     font-family: 'SolaimanLipi', sans-serif !important;
 }
 
-.form-control:focus {
-    border-color: #29cb6f !important;
-}
-
 .select2-container--default .select2-selection--single {
     height: 42px !important;
 }
