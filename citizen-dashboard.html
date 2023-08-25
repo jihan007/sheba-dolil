@@ -14,10 +14,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>দলিল সেবা</title><meta name="description" content="ড্যাশবোর্ড"><meta name="keywords" content="Dolil, sheba, amrsheba, internet, services"><link rel="canonical" href="/admin/dashboard"><meta name="robots" content="all"><meta property="og:title" content="ড্যাশবোর্ড"><meta property="og:description" content="ড্যাশবোর্ড"><meta property="og:url" content="/admin/dashboard"><meta property="og:type" content="services"><meta name="twitter:title" content="ড্যাশবোর্ড"><meta name="twitter:description" content="ড্যাশবোর্ড"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Dolil Seba","description":"Dolil Seba provides All kinds of internet Services in One Place. We are here to serve you.","url":"/admin/dashboard"}</script>
+    <title>সেবা</title><meta name="description" content="ড্যাশবোর্ড"><meta name="keywords" content="Dolil, sheba, amrsheba, internet, services"><link rel="canonical" href="/admin/dashboard"><meta name="robots" content="all"><meta property="og:title" content="ড্যাশবোর্ড"><meta property="og:description" content="ড্যাশবোর্ড"><meta property="og:url" content="/admin/dashboard"><meta property="og:type" content="services"><meta name="twitter:title" content="ড্যাশবোর্ড"><meta name="twitter:description" content="ড্যাশবোর্ড"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Dolil Seba","description":"Dolil Seba provides All kinds of internet Services in One Place. We are here to serve you.","url":"/admin/dashboard"}</script>
     
     <!-- App favicon -->
-    <link rel="icon" href="images/site-icon.png" type="image/x-icon">
+    <link rel="icon" href="images/site-icon.svg" type="image/x-icon">
     
     <style>[wire\:loading], [wire\:loading\.delay], [wire\:loading\.inline-block], [wire\:loading\.inline], [wire\:loading\.block], [wire\:loading\.flex], [wire\:loading\.table], [wire\:loading\.grid], [wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short], [wire\:loading\.delay\.long], [wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest] {display:none;}[wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}input:-webkit-autofill, select:-webkit-autofill, textarea:-webkit-autofill {animation-duration: 50000s;animation-name: livewireautofill;}@keyframes livewireautofill { from {} }</style>
     
@@ -80,7 +80,7 @@
             <nav class="sidebar">
                 <div class="sidebar-header">
                     <a href="" class="sidebar-brand">
-                        দলিল<span> সেবা</span>
+                        <i class="fab fa-servicestack"></i>
                     </a>
                     <div class="sidebar-toggler not-active">
                         <span></span>
@@ -95,25 +95,8 @@
                         </li>
                         <li class="text-capitalize active nav-item ">
                             <a class="active text-capitalize waves-effect nav-link" href="admin-dashboard.html">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-box link-icon"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                                
                                 <span class="link-title">ড্যাশবোর্ড</span>
-                            </a>
-                        </li>
-                        <li class="text-capitalize  nav-item nav-category ">
-                            সেবার হিসাব
-                        </li>
-                        <li class="text-capitalize  nav-item ">
-                            <a class=" text-capitalize waves-effect nav-link" href="deposit.html">
-                                <i class="fas fa-money-check-alt"></i>
-                                <span class="link-title">রিচার্জ/ জমা</span>
-                            </a>
-                        </li>
-                        <li class="text-capitalize nav-item ">
-                            <a class=" text-capitalize waves-effect nav-link" href="expense.html">
-                                <i class="fas fa-donate"></i>
-                                <span class="link-title">
-                                    ব্যয় সমূহ
-                                </span>
                             </a>
                         </li>
                     </ul>
@@ -186,58 +169,12 @@
                                         <div class="card">                                            
                                             <div class="card-body pb-0">
                                                 <h4>
-                                                    <strong>সেবা প্রদানের তথ্য</strong>
-                                                    <a class="btn btn-sm btn-success" style="float:right;" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa fa-plus text-white"></i>&nbsp;NID রিকুয়েস্ট যুক্ত করুন</a>
+                                                <a class="btn btn-sm btn-success" href="request.html" style="float:right;"><i class="fa fa-plus text-white"></i></a>
                                                 </h4>
                                             </div>
                                             
                                             
                                             <div class="card-body pl-0 pr-0">
-                                                
-                                                <div class="form-group custom-col-7 row">
-                                                    <div class="col-md-3 mb-3">
-                                                        <label for="date_from">Date From</label>
-                                                        <input type="date" name="date_from" id="date_from" class="form-control" autocomplete="off" value="">
-                                                    </div>
-                                                    <div class="col-md-3 mb-3">
-                                                        <label for="date_to">Date To</label>
-                                                        <input type="date" name="date_to" id="date_to" class="form-control" autocomplete="off" value="">
-                                                    </div>
-                                                    <div class="col-md-3 mb-3">
-                                                        <label for="nid_no">NID Number</label>
-                                                        <input type="number" name="nid_no" id="nid_no" class="form-control" placeholder="NID Number in English" autocomplete="off">
-                                                    </div>
-                                                    <div class="col-md-2 d-flex align-items-end mb-3">
-                                                        <button type="submit" class="btn btn-block btn-success mt-0 ">
-                                                            <i fill="currentColor" class="text-white " style="display: inline-block;"><svg fill="currentColor" height="16" width="16" viewBox="0 0 1664 1792" style="display: inline-block; vertical-align: middle;"><path d="M1152 832q0-185-131.5-316.5t-316.5-131.5-316.5 131.5-131.5 316.5 131.5 316.5 316.5 131.5 316.5-131.5 131.5-316.5zM1664 1664q0 52-38 90t-90 38q-54 0-90-38l-343-342q-179 124-399 124-143 0-273.5-55.5t-225-150-150-225-55.5-273.5 55.5-273.5 150-225 225-150 273.5-55.5 273.5 55.5 225 150 150 225 55.5 273.5q0 220-124 399l343 343q37 37 37 90z"></path></svg></i><span>&nbsp;Search</span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                
-                                                <!-- Modal -->
-                                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                                    <div class="modal-dialog modal-lg">
-                                                        <div class="modal-content">
-                                                            <div class="modal-header">
-                                                                <h1 class="modal-title fs-5" id="exampleModalLabel">NID রিকুয়েস্ট যুক্ত করুন</h1>
-                                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                            </div>
-                                                            <div class="modal-body">
-                                                                <form>
-                                                                    <div class="row mb-3">
-                                                                        <div class="col-md-12 "><table class="table table-bordered"><thead><tr><th scope="col">Office Name</th><th scope="col">NID নম্বর</th><th scope="col">জন্ম তারিখ</th><th scope="col">পেমেন্ট</th><th scope="col">Actions</th></tr></thead><tbody><tr><td><div><div class=" css-b62m3t-container"><div class="custom-select__control css-d6csv6-control"><div class="custom-select__value-container css-hlgwow"><div class="custom-select__placeholder css-1jqq78o-placeholder" id="react-select-4-placeholder">চাখার, বরিশাল</div><div class="custom-select__input-container css-19bb58m" data-value=""><input class="custom-select__input" autocapitalize="none" autocomplete="off" autocorrect="off" id="react-select-4-input" spellcheck="false" tabindex="0" type="text" aria-autocomplete="list" aria-expanded="false" aria-haspopup="true" role="combobox" aria-describedby="react-select-4-placeholder" value="" style="color: inherit; background: 0px center; opacity: 1; width: 100%; grid-area: 1 / 2 / auto / auto; font: inherit; min-width: 2px; border: 0px; margin: 0px; outline: 0px; padding: 0px;"></div></div><div class="custom-select__indicators css-1wy0on6"></div></div><input name="land_class_id" type="hidden" value=""></div></div></td><td><input type="number" name="land_amount" class="form-control" value=""></td><td><div><div class=" css-b62m3t-container"><span id="react-select-5-live-region" class="css-7pg0cj-a11yText"></span><span aria-live="polite" aria-atomic="false" aria-relevant="additions text" class="css-7pg0cj-a11yText"></span><div class="custom-select__control css-d6csv6-control"><div class="custom-select__value-container css-hlgwow"><div class="custom-select__placeholder css-1jqq78o-placeholder" id="react-select-5-placeholder">০২/১১/১৯৮৯</div><div class="custom-select__input-container css-19bb58m" data-value=""><input class="custom-select__input" autocapitalize="none" autocomplete="off" autocorrect="off" id="react-select-5-input" spellcheck="false" tabindex="0" type="text" aria-autocomplete="list" aria-expanded="false" aria-haspopup="true" role="combobox" aria-describedby="react-select-5-placeholder" value="" style="color: inherit; background: 0px center; opacity: 1; width: 100%; grid-area: 1 / 2 / auto / auto; font: inherit; min-width: 2px; border: 0px; margin: 0px; outline: 0px; padding: 0px;"></div></div><div class="custom-select__indicators css-1wy0on6"></div></div><input name="land_unit_id" type="hidden" value=""></div></div></td><td><input type="number" name="land_price" class="form-control" value=""></td><td class="d-flex align-items-center justify-content-around"><button type="button" class="btn btn-danger btn-md"><i fill="currentColor" class="text-white " style="display: inline-block;"><svg fill="currentColor" height="10" width="10" viewBox="0 0 1408 1792" style="display: inline-block; vertical-align: middle;"><path d="M1408 736v192q0 40-28 68t-68 28h-1216q-40 0-68-28t-28-68v-192q0-40 28-68t68-28h1216q40 0 68 28t28 68z"></path></svg></i></button><button type="button" class="btn btn-success btn-md"><i fill="currentColor" class="text-white " style="display: inline-block;"><svg fill="currentColor" height="10" width="10" viewBox="0 0 1408 1792" style="display: inline-block; vertical-align: middle;"><path d="M1408 736v192q0 40-28 68t-68 28h-416v416q0 40-28 68t-68 28h-192q-40 0-68-28t-28-68v-416h-416q-40 0-68-28t-28-68v-192q0-40 28-68t68-28h416v-416q0-40 28-68t68-28h192q40 0 68 28t28 68v416h416q40 0 68 28t28 68z"></path></svg></i></button></td></tr></tbody></table></div>
-                                                                    </div>
-                                                                    
-                                                                    <button type="submit" class="btn btn-success"><i class="far fa-check-square"></i>&nbsp;&nbsp;Submit</button>
-                                                                </form>
-                                                            </div>
-                                                            <div class="modal-footer">
-                                                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                                                            </div>
-                                                        </div>											
-                                                    </div>
-                                                </div>
-                                                <!--/ Modal -->
                                                 
                                                 <div id="_wrapper" class=" dt-bootstrap4 no-footer">
                                                     <div class="s_scroll">										
@@ -251,7 +188,7 @@
                                                                     </th>
                                                                     <th class="sorting" colspan="1" rowspan="1">
                                                                         <div class="s_sizing">
-                                                                            NID নম্বর
+                                                                            NID
                                                                         </div>
                                                                     </th>
                                                                     <th class="sorting" colspan="1" rowspan="1">
@@ -261,12 +198,12 @@
                                                                     </th>
                                                                     <th class="sorting" colspan="1" rowspan="1">
                                                                         <div class="s_sizing">
-                                                                            আবেদনের তারিখ
+                                                                            তারিখ
                                                                         </div>
                                                                     </th>
                                                                     <th class="sorting" colspan="1" rowspan="1">
                                                                         <div class="s_sizing">
-                                                                            আবেদনের স্ট্যাটাস
+                                                                            স্ট্যাটাস
                                                                         </div>
                                                                     </th>
                                                                     <th class="sorting" colspan="1" rowspan="1">
@@ -305,7 +242,7 @@
                     </div>
                 </div>
                 <footer class="footer d-flex flex-column flex-md-row align-items-center justify-content-center px-4 py-3 border-top small">
-                    <p class="text-muted mb-1 mb-md-0">Copyright © 2023 দলিল সেবা. All rights reserved. This software is for presentation purpose only.
+                    <p class="text-muted mb-1 mb-md-0"> All rights reserved. This software is for presentation purpose only.
                         
                     </p>
                     
